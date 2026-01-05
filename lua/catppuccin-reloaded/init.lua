@@ -3,8 +3,8 @@ local CatppuccinReloaded = {}
 function CatppuccinReloaded.setup(opts)
   local catppuccin = require("catppuccin")
   local paths = vim.api.nvim_get_runtime_file("lua/catppuccin/palettes", true)
+  local seen = { latte = true, frappe = true, macchiato = true, mocha = true}
   local offset = 4
-  local seen = {}
 
   for _, dir in ipairs(paths) do
     local files = vim.fn.readdir(dir)
