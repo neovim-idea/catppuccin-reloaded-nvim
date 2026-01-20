@@ -12,7 +12,7 @@ function CatppuccinReloaded.setup(opts)
     table.sort(files)
     for _, file in ipairs(files) do
       local name = vim.fn.fnamemodify(file, ":t:r")
-      if not seen[name] then
+      if file ~= "init.lua" and not seen[name] then
         seen[name] = true
         catppuccin.flavours[name] = offset + 1
         offset = offset + 1
@@ -20,7 +20,7 @@ function CatppuccinReloaded.setup(opts)
     end
   end
 
-  catppuccin.setup(opts.catppuccin or {})
+  catppuccin.setup(opts.catppuccin)
 end
 
 return CatppuccinReloaded
