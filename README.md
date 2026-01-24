@@ -92,19 +92,19 @@ Suppose you'd like to create your own `matrix-reloaded` theme:
    of simplicity, `~.config/nvim/`)
 2. create a subfolder `colors/`, with a file called `catppuccin-matrixreloaded.lua`, with following content
    ```lua
-   require("catppuccin").load("matrix")
+   require("catppuccin").load("matrixreloaded")
    ```
 3. create a subfolder `lua/catppuccin/palettes/`, with a file called `matrixreloaded.lua` (NO spaces, NOR hyphenations)
 4. copy paste the content from an existing palette, i.e [frappe](https://github.com/catppuccin/nvim/blob/main/lua/catppuccin/palettes/frappe.lua), to have an easy start, and change the colors as you deem fit
 5. create a subfolder `lua/lualine/themes/`, with a file called `catppuccin-matrixreloaded.lua`, with following content
    ```lua
-   return require "catppuccin.utils.lualine" "frappe"
+   return require "catppuccin.utils.lualine" "matrixreloaded"
    ```
    this will make sure that your new custom theme will be used by [lualine](https://github.com/nvim-lualine/lualine.nvim) (and even if you don't let's be nice and
    provide it anyways)
 6. create a subfolder `ua/barbecue/theme/`, with a file called `catppuccin-matrixreloaded.lua`, with following content
    ```lua
-   return require "catppuccin.utils.barbecue" "frappe"
+   return require "catppuccin.utils.barbecue" "matrixreloaded"
    ```
    again, this is not required if you're not using [barbecue.nvim](https://github.com/utilyre/barbecue.nvim), but it's
    nice if you're redistributing the theme and somebody is using it
